@@ -23,8 +23,8 @@
 |:------: | :------: | :--: |
 |  线性表  | [顺序存储](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/List.cpp) |  ✅   |
 |  线性表  | [链式存储](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/LinkedL.cpp) |  ✅   |
-|          |          |      |
-
+|  线性表  | 广义表 |  ❌  |
+|  线性表  | 多重链表 | ❌ |
 ## 相关链接
 
 [数据结构——浙江大学（MOOC网）](https://www.icourse163.org/course/ZJU-93001)
