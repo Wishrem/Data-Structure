@@ -33,7 +33,7 @@ int Length(List L); // 返回线性表L的长度n
 
 1. **顺序存储**
 
-![List]()
+![List](https://github.com/Wishrem/Data-Structure/tree/dev/Chp%202/img/List.png)
 
 **利用数组的==连续存储空间顺序存放==线性表的各元素**
 
