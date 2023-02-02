@@ -22,7 +22,7 @@
 | 数据结构 |   实例   | 状态 |
 |:------: | :------: | :--: |
 |  线性表  | [顺序存储](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/List.cpp) |  ✅   |
-|          |          |      |
+|  线性表  | [链式存储](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/LinkedL.cpp) |  ✅   |
 |          |          |      |
 
 ## 相关链接
