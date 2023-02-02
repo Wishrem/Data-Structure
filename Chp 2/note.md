@@ -44,7 +44,6 @@ struct LNode{
   // MAXSIZE 需要define定义，这里没写
   int Last; // 需要知道最后一个元素的位置，可判断是否装满，或者在查找的时候防止越界
 };
-struct LNode L;
 List PtrL; // Pointer List
 
 /**用法：
@@ -54,3 +53,46 @@ List PtrL; // Pointer List
 ```
 
 ADT的操作集实现详见List.cpp，⚠️注意实际代码中的下标是从i=0开始，而在ADT描述中下标是从i=1开始
+
+运行指令：
+
+```bash
+g++ List.cpp -o List.out
+./List.out
+```
+
+
+
+2. **链式存储**
+
+![LinkedL]()
+
+**==不要求逻辑上相邻的两个元素物理上也相邻==；通过“链”建立起元素之间的逻辑关系。**
+
+```c++
+typedef struct LNode *List;
+struct LNode{
+  ElementType Data;
+  List Next; // 下一个元素的指针
+};
+List Head;
+```
+
+ADT的操作集实现详见LinkedL.cpp
+
+运行指令：
+
+```bash
+g++ LinkedL.cpp -o LinkedL.out
+./LinkedL.out
+# 运行时会有感觉比顺序存储慢一些，这个是因为有大量申请和删除空间操作，还有求长度操作
+```
+
+插入操作：
+
+![LinkedL Insert]()
+
+删除操作：
+
+![LinkedL Delete]()
+
