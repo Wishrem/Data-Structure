@@ -21,10 +21,11 @@
 
 | 数据结构 |   实例   | 状态 |
 |:------: | :------: | :--: |
-|  线性表  | 顺序存储 |  ✅   |
+|  线性表  | [顺序存储](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/List.cpp) |  ✅   |
 |          |          |      |
 |          |          |      |
 
 ## 相关链接
 
 [数据结构——浙江大学（MOOC网）](https://www.icourse163.org/course/ZJU-93001)
+[B站](https://www.bilibili.com/video/BV1Kb41127fT)
