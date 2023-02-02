@@ -10,7 +10,6 @@ struct LNode
     ElementType Data[MAXSIZE];
     int Last;
 };
-struct LNode L;
 List PtrL;
 
 List MakeEmpty()
@@ -20,6 +19,8 @@ List MakeEmpty()
     PtrL->Last = -1; // PtrL->Last+1 为长度
     return PtrL;
 }
+
+// FindKth没有实现，因为太简单了
 
 int Find(ElementType X, List PtrL)
 {
