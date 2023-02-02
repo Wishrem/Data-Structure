@@ -78,7 +78,7 @@ struct LNode{
 List Head;
 ```
 
-ADT的操作集实现详见LinkedL.cpp
+ADT的操作集实现详见LinkedL.cpp，⚠️注意Head是指向的是第一个指针，并没有创建一个而外的空节点。
 
 运行指令：
 
@@ -95,5 +95,4 @@ g++ LinkedL.cpp -o LinkedL.out
 删除操作：
 
 ![LinkedL Delete]()
-
 

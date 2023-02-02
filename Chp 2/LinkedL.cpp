@@ -12,16 +12,11 @@ struct LNode
 };
 List Head;
 
-// List MakeEmpty()
-// {
-//     List PtrL;
-//     PtrL = new LNode;
-//     return PtrL;
-// }
+// 不需要MakeEmpty()
 
-int Length(List PtrL)
+int Length(List Head)
 {
-    List p = PtrL; // 指向第一个节点，我们不希望修改PtrL的指向
+    List p = Head; // 指向第一个节点，我们不希望修改Head的指向
     int j = 0;
     while (p)
     {
@@ -33,9 +28,9 @@ int Length(List PtrL)
     // 时间复杂度O(n)
 }
 
-List FindKth(int K, List PtrL)
+List FindKth(int K, List Head)
 {
-    List p = PtrL;
+    List p = Head;
     int i = 1;
     // 不为空，且下标小于K
     while (p && i < K)
@@ -49,15 +44,15 @@ List FindKth(int K, List PtrL)
         return nullptr;
 }
 
-List Find(ElementType X, List PtrL)
+List Find(ElementType X, List Head)
 {
-    List p = PtrL;
+    List p = Head;
     while (p && p->Data != X)
         p = p->Next;
     return p;
 }
 
-List Insert(ElementType X, int i, List PtrL)
+List Insert(ElementType X, int i, List Head)
 {
     List p, s; // p: 第i个节点的前一个 s: 需要插入的节点
     s = new LNode;
@@ -65,45 +60,45 @@ List Insert(ElementType X, int i, List PtrL)
     if (i == 1) // 在表头插入
     {
 
-        s->Next = PtrL;
+        s->Next = Head;
         return s;
     }
-    p = FindKth(i - 1, PtrL);
+    p = FindKth(i - 1, Head);
     if (!p) // p为空
     {
         puts("范围错误");
-        return PtrL;
+        return Head;
     }
 
     // 插入
     s->Next = p->Next;
     p->Next = s;
-    return PtrL;
+    return Head;
 }
 
-List Delete(int i, List PtrL)
+List Delete(int i, List Head)
 {
     List p, s;
     if (i == 1)
     {
-        s = PtrL;
-        if (PtrL)
-            PtrL = PtrL->Next;
+        s = Head;
+        if (Head)
+            Head = Head->Next;
         free(s);
-        return PtrL;
+        return Head;
     }
-    p = FindKth(i - 1, PtrL);
+    p = FindKth(i - 1, Head);
     if (!p || !p->Next)
     {
         puts("范围错误");
-        return PtrL;
+        return Head;
     }
 
     // 删除
     s = p->Next;
     p->Next = s->Next;
     free(s);
-    return PtrL;
+    return Head;
 }
 
 // Debug
@@ -113,7 +108,7 @@ int Rand(int lb, int ub)
     return (rand() % (ub - lb + 1) + lb);
 }
 
-void Test(List PtrL, List (*fp)(List PtrL, int i), int times)
+void Test(List Head, List (*fp)(List Head, int i), int times)
 {
     int lb = 1, ub = times;
     int n = Rand(lb, ub);
@@ -121,16 +116,16 @@ void Test(List PtrL, List (*fp)(List PtrL, int i), int times)
     int i;
     for (int j = 0; j < n; j++)
     {
-        ub = Length(PtrL) + 2;
+        ub = Length(Head) + 2;
         i = Rand(lb, ub);
-        PtrL = fp(PtrL, i);
+        Head = fp(Head, i);
     }
 }
 
-void PrintList(List PtrL)
+void PrintList(List Head)
 {
     printf("LinkedL:");
-    List p = PtrL;
+    List p = Head;
     while (p)
     {
         printf("%d ", p->Data);
@@ -139,21 +134,21 @@ void PrintList(List PtrL)
     printf("\n");
 }
 
-List InsertTest(List PtrL, int i)
+List InsertTest(List Head, int i)
 {
     ElementType X = Rand(1, 100); // 因为rand都为整数，不考虑类型转换
     printf("尝试在下标i=%d，插入X=%d\n", i, X);
-    PtrL = Insert(X, i, PtrL);
-    PrintList(PtrL);
-    return PtrL;
+    Head = Insert(X, i, Head);
+    PrintList(Head);
+    return Head;
 }
 
-List DeleteTest(List PtrL, int i)
+List DeleteTest(List Head, int i)
 {
     printf("尝试删除下标i=%d的元素\n", i);
-    PtrL = Delete(i, PtrL);
-    PrintList(PtrL);
-    return PtrL;
+    Head = Delete(i, Head);
+    PrintList(Head);
+    return Head;
 }
 
 int main()
