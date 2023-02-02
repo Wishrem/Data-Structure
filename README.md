@@ -28,5 +28,6 @@
 ## 相关链接
 
 [数据结构——浙江大学（MOOC网）](https://www.icourse163.org/course/ZJU-93001)
-[B站](https://www.bilibili.com/video/BV1Kb41127fT)
+
+[本人看的B站搬运版本](https://www.bilibili.com/video/BV1Kb41127fT)
 
