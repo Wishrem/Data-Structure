@@ -33,7 +33,7 @@ int Length(List L); // 返回线性表L的长度n
 
 1. **顺序存储**
 
-![List](https://github.com/Wishrem/Data-Structure/tree/dev/Chp%202/img/List.png)
+![List]()
 
 **利用数组的==连续存储空间顺序存放==线性表的各元素**
 
@@ -47,7 +47,7 @@ struct LNode{
 List PtrL; // List Pointer
 ```
 
-ADT的操作集实现详见List.cpp，⚠️注意实际代码中的下标是从i=0开始，而在ADT描述中下标是从i=1开始
+ADT的操作集实现详见List/List.cpp，⚠️注意实际代码中的下标是从i=0开始，而在ADT描述中下标是从i=1开始
 
 运行指令：
 
@@ -73,7 +73,7 @@ struct LNode{
 List Head;  // 指向第一个元素
 ```
 
-ADT的操作集实现详见LinkedL.cpp，⚠️注意Head是指向的是第一个指针，并没有创建一个而外的空结点。
+ADT的操作集实现详见List/LinkedL.cpp，⚠️注意Head是指向的是第一个指针，并没有创建一个而外的空结点。
 
 运行指令：
 
