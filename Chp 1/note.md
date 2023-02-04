@@ -162,4 +162,4 @@ $T_{avg}(n)\le T_{worst}(n)$
 
 关于n的规模递增函数（n充分大的时候）：
 
-$1<<logn<<n<<nlogn<<n^2<<n^3<<2^n<<n!$
+$1\ll logn\ll n\ll nlogn\ll n^2\ll n^3\ll 2^n\ll n!$

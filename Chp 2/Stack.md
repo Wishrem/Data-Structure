@@ -32,7 +32,7 @@ ElementType Pop(Stack S); // 删除并返回栈顶元素
 
 **由一个==一维数组==和一个记录==栈顶==元素位置的变量组成**
 
-![Stack]()
+![Stack](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/img/Stack.png)
 
 ```c++
 typedef struct SNode *Stack;
@@ -50,7 +50,7 @@ ADT的操作集实现详见Stack/Stack.cpp，⚠️这里Top是从-1开始
 
 > 例1:请用一个数组实现两个堆栈，要求最大地利用数组空间，使数组只要有空间入栈操作就可以成功。
 
-![Eg1]()
+![Eg1](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/img/Eg1.png)
 
 ```c++
 typedef struct SNode *DStack; // Double Stack
@@ -71,7 +71,7 @@ Ptrs->Top2=MaxSize;
 
 2. **链式存储**
 
-![LinkedS]()
+![LinkedS](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/img/LinkedS.png)
 
 **由一个==单链表==和==Top==指针构成，叫做==链栈==**
 
