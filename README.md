@@ -26,15 +26,15 @@
 
 | 数据结构 |   实例   | 状态 |
 |:------: | :------: | :--: |
-|  线性表  | 顺序存储 |  ❗️ |
-|  线性表  | 链式存储 |  ❗️ |
+|  线性表  | (顺序存储)[https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/List/List.cpp] |  ❗️ |
+|  线性表  | (链式存储)[https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/List/LinkedL.cpp] |  ❗️ |
 |  线性表  | 广义表 |  ❌  |
 |  线性表  | 多重链表 | ❌ |
-| 堆栈 | 顺序存储 | ❗️ |
-| 堆栈 | 链式存储 | ❗️ |
-|   堆栈   | 中缀表达式求值 |  ❗️   |
-|   队列   | 顺环存储 |  ✅   |
-|   队列   | 链式存储 |  ✅   |
+| 堆栈 | (顺序存储)[https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/Stack/Stack.cpp] | ❗️ |
+| 堆栈 | (链式存储)[https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/Stack/LinkedS.cpp] | ❗️ |
+|   堆栈   | (中缀表达式求值)[https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/Stack/Cacl.cpp] |  ❗️   |
+|   队列   | (顺环存储)[https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/Queue/LoopQ.cpp] |  ✅   |
+|   队列   | (链式存储)[https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/Queue/LinkedQ.cpp] |  ✅   |
 
 ## 相关链接
 
