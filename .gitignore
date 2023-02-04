@@ -31,8 +31,11 @@
 *.out
 *.app
 
-# vscode
+# Debug
+*.dSYM
+
+# VSCode
 .vscode/
 
-# apple
+# Mac Platform
 .DS_Store
