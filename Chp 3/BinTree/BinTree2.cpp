@@ -69,8 +69,10 @@ void inOrder(BinTree &node, void (*fn)(BinTree))
 }
 
 /**
- * 访问顺序和先序一样，只要改造访问的顺序
  * 栈的特点是后入先出
+ * st1为返回上一层的栈，st2为用于打印的栈
+ * 先压入st1的最后才会被压入st2
+ * 所以压入st2的顺序为根右左
  * 该算法效率不是最高的，但是最容易理解的和实现的
  */
 void postOrder1(BinTree &node, void (*fn)(BinTree))
