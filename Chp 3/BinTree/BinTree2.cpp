@@ -137,30 +137,6 @@ void postOrder2(BinTree &node, void (*fn)(BinTree))
     }
 }
 
-void levelOrder(BinTree &node, void (*fn)(BinTree))
-{
-    std::deque<BinTree> q;
-
-    int n;
-    BinTree tmp;
-    if (node)
-        q.push_back(node);
-    while (!q.empty())
-    {
-        n = q.size();
-        for (size_t i = 0; i < n; i++)
-        {
-            tmp = q.front();
-            q.pop_front();
-            fn(tmp);
-            if (tmp->left)
-                q.push_back(tmp->left);
-            if (tmp->right)
-                q.push_back(tmp->right);
-        }
-    }
-}
-
 BinTree createBinTree()
 {
     BinTree root = new TreeNode;

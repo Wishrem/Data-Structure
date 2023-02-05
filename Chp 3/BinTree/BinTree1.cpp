@@ -1,5 +1,5 @@
 #include <iostream>
-#include <deque>
+#include <queue>
 
 typedef struct TreeNode *BinTree;
 typedef int ElementType;
@@ -53,27 +53,19 @@ void postOrder(BinTree &node, void (*fn)(BinTree))
 
 void levelOrder(BinTree &node, void (*fn)(BinTree))
 {
-    std::deque<BinTree> q; // bfs实现，用deque是因为需要它的size参数
-
-    int n;
-    BinTree tmp;
-    if (node) // 开始
-        q.push_back(node);
+    std::queue<BinTree> q;
+    if (!node)
+        q.push(node);
+    BinTree curr;
     while (!q.empty())
     {
-        n = q.size();
-        for (size_t i = 0; i < n; i++) // 将同一层的结点全部pop出去
-        {
-            tmp = q.front();
-            q.pop_front();
-            fn(tmp); // 访问
-
-            // 将下一层的结点压入q中
-            if (tmp->left)
-                q.push_back(tmp->left);
-            if (tmp->right)
-                q.push_back(tmp->right);
-        }
+        curr = q.front();
+        q.pop();
+        fn(curr);
+        if (curr->left)
+            q.push(curr->left);
+        if (curr->right)
+            q.push(curr->right);
     }
 }
 
