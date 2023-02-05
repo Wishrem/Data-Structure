@@ -33,7 +33,7 @@ int length(List l); // 返回线性表L的长度n
 
 1. **顺序存储**
 
-![List](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/img/List.png)
+![List](https://github.com/Wishrem/Data-Structure/blob/main/Linear/img/List.png)
 
 **利用数组的==连续存储空间顺序存放==线性表的各元素**
 
@@ -60,7 +60,7 @@ g++ List.cpp -o List.out
 
 2. **链式存储**
 
-![LinkedL](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/img/LinkedL.png)
+![LinkedL](https://github.com/Wishrem/Data-Structure/blob/main/Linear/img/LinkedL.png)
 
 **==不要求逻辑上相邻的两个元素物理上也相邻==；通过“链”建立起元素之间的逻辑关系。**
 
@@ -85,11 +85,11 @@ g++ LinkedL.cpp -o LinkedL.out
 
 插入操作：
 
-![LinkedL Insert](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/img/LinkedL%20Insert.png)
+![LinkedL Insert](https://github.com/Wishrem/Data-Structure/blob/main/Linear/img/LinkedLInsert.png)
 
 删除操作：
 
-![LinkedL Delete](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/img/LinkedL%20Delete.png)
+![LinkedL Delete](https://github.com/Wishrem/Data-Structure/blob/main/Linear/img/LinkedLDelete.png)
 
 3. **广义表**
 
@@ -125,7 +125,7 @@ struct GNode{
 
 > 例2:
 
-![Multiple Linked List](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/img/eg2.png)
+![Multiple Linked List](https://github.com/Wishrem/Data-Structure/blob/main/Linear/img/MultipleLinkedList.png)
 
 - **链表中的结点可能同时隶属于多个链；**
 - **多重链表中结点的==指针域会有多个==，如前面广义表中包含了Next和SubList两个指针域；**
