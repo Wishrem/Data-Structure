@@ -17,11 +17,11 @@
 **操作集**：长度为$MaxSize$的堆栈$S\in Stack$，堆栈元素$item\in ElementType$
 
 ```c++
-Stack CreateStack(int MaxSize); // 生成空堆栈，其最大长度为MaxSize
-bool IsFull(Stack S, int MaxSize); // 判断堆栈S是否已满
-void Push(Stack S, ElementType item); // 将元素item压入堆栈
-bool IsEmpty(Stack S); // 判断堆栈S是否为空
-ElementType Pop(Stack S); // 删除并返回栈顶元素
+Stack createStack(int maxSize); // 生成空堆栈，其最大长度为MaxSize
+bool isFull(Stack S, int maxSize); // 判断堆栈S是否已满
+void push(Stack S, ElementType item); // 将元素item压入堆栈
+bool isEmpty(Stack s); // 判断堆栈S是否为空
+ElementType pop(Stack s); // 删除并返回栈顶元素
 ```
 
 **具有后入先出（LIFO）的特点**
@@ -37,8 +37,8 @@ ElementType Pop(Stack S); // 删除并返回栈顶元素
 ```c++
 typedef struct SNode *Stack;
 struct SNode{
-  ElementType Data[MaxSize];
-  int Top; // 指向当前栈顶元素，即从-1开始；若从0开始，则指向栈顶的上一个位置
+  ElementType data[MAXSIZE];
+  int top; // 指向当前栈顶元素，即从-1开始；若从0开始，则指向栈顶的上一个位置
 };
 
 Stack PtrS;
@@ -50,22 +50,22 @@ ADT的操作集实现详见Stack/Stack.cpp，⚠️这里Top是从-1开始
 
 > 例1:请用一个数组实现两个堆栈，要求最大地利用数组空间，使数组只要有空间入栈操作就可以成功。
 
-![Eg1](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/img/Eg1.png)
+![Double Stack](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/img/Eg1.png)
 
 ```c++
 typedef struct SNode *DStack; // Double Stack
 struct SNode{
-  ElementType Data[MaxSize];
-  int Top1;
-  int Top2;
+  ElementType data[MAXSIZE];
+  int top1;
+  int top2;
 };
 
 DStack PtrS;
-PtrS->Top1=-1;
-Ptrs->Top2=MaxSize;
+PtrS->top1=-1;
+Ptrs->top2=MAXSIZE;
 ```
 
-样例实现详见Stack/Eg1.cpp
+样例实现详见Stack/DStack.cpp
 
 ~~太简单没有运行指令~~
 
@@ -78,8 +78,8 @@ Ptrs->Top2=MaxSize;
 ```c++
 typedef struct SNode *LinkedS; // Linked Stack
 struct SNode{
-  ElementType Item;
-  LinkedS Next;
+  ElementType item;
+  LinkedS next;
 };
 
 LinkedS Top;	// 始终指向链表头

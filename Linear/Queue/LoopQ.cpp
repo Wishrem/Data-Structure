@@ -1,13 +1,13 @@
 #include <iostream>
 
-#define MaxSize 10
+#define MAXSIZE 10
 
 typedef struct QNode *LoopQ;
 typedef int ElementType;
 ElementType ERROR = -1;
 struct QNode
 {
-    ElementType data[MaxSize + 1];
+    ElementType data[MAXSIZE + 1];
     int rear;
     int front;
 };
@@ -23,10 +23,10 @@ LoopQ createQueue()
 
 bool isFull(LoopQ &q)
 {
-    return (q->rear + 1) % (MaxSize + 1) == q->front;
+    return (q->rear + 1) % (MAXSIZE + 1) == q->front;
 }
 
-void append(LoopQ &q, ElementType item)
+void push(LoopQ &q, ElementType item)
 {
     if (isFull(q))
     {
@@ -34,7 +34,7 @@ void append(LoopQ &q, ElementType item)
         return;
     }
     q->data[(q->rear)++] = item;
-    q->rear %= (MaxSize + 1);
+    q->rear %= (MAXSIZE + 1);
 }
 
 bool isEmpty(LoopQ &q)
@@ -50,7 +50,7 @@ ElementType pop(LoopQ &q)
         return ERROR; // 是ElementType的特殊值，表示错误
     }
     ElementType item = q->data[(q->front)++];
-    q->front %= (MaxSize + 1);
+    q->front %= (MAXSIZE + 1);
     return item;
 }
 bool randBoolean()
@@ -62,7 +62,7 @@ void print(LoopQ &q)
 {
     std::cout << "Queue：";
     int idx = q->front;
-    for (int i = 0; i < (q->rear - q->front + MaxSize + 1) % (MaxSize + 1); i++, idx = (idx + 1) % (MaxSize + 1))
+    for (int i = 0; i < (q->rear - q->front + MAXSIZE + 1) % (MAXSIZE + 1); i++, idx = (idx + 1) % (MAXSIZE + 1))
     {
         std::cout << q->data[idx] << " ";
     }
@@ -77,7 +77,7 @@ void test(LoopQ &q, int times)
         if (randBoolean())
         {
             printf("尝试插入item=%d\n", item);
-            append(q, item++);
+            push(q, item++);
         }
         else
         {

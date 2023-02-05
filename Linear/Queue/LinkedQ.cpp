@@ -27,7 +27,7 @@ LinkedQ createQueue()
 
 // 内存足够多，永远不会满
 
-void append(LinkedQ &q, ElementType item)
+void push(LinkedQ &q, ElementType item)
 {
     q->rear->item = item;
     q->rear->next = new Node;
@@ -78,7 +78,7 @@ void test(LinkedQ &q, int times)
         if (randBoolean())
         {
             printf("尝试插入item=%d\n", item);
-            append(q, item++);
+            push(q, item++);
         }
         else
         {
