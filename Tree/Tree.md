@@ -13,7 +13,7 @@
   -  **树中有一个成为==“根”（Root）“==的特殊节点，用$r$表示；**
   - **其余结点可分为$m$（$m\gt0$）个互不相交的有限集$T_1,T_2,\dots,T_m$，其中每个集合本身又是一棵树，称为原来树的==“子树”（SubTree）==**
 
-![Tree]()
+![Tree](https://github.com/Wishrem/Data-Structure/blob/main/Tree/img/Tree.png)
 
 ### 基本术语
 
@@ -34,7 +34,7 @@
 
 1. **儿子-兄弟表示法**
 
-![Child-Sib]()
+![Child-Sib](https://github.com/Wishrem/Data-Structure/blob/main/Tree/img/Child-Silb.png)
 
 ```c++
 typedef struct TNode *Tree;
