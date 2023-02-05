@@ -28,7 +28,7 @@ ElementType pop(Queue q); // 将队头数据元素从队列中删除并返回
 
 **由一个==一位数组==和一个记录队列头元素位置的变量==front==以及一个记录队列尾元素位置的变量==rear==组成**
 
-![Queue](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/img/Queue.png)
+![Queue](https://github.com/Wishrem/Data-Structure/blob/main/Linear/img/Queue.png)
 
 ```c++
 typedef struct QNode *Queue;
@@ -45,7 +45,7 @@ Queue PtrQ;
 
 2. **顺环队列**
 
-![LoopQ](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/img/LoopQ.png)
+![LoopQ](https://github.com/Wishrem/Data-Structure/blob/main/Linear/img/LoopQ.png)
 
 ```c++
 typedef struct QNode *LoopQ;
@@ -71,7 +71,7 @@ g++ LoopQ.cpp -o LoopQ.out
 
 **用一个==单链表==实现，插入在队尾进行，删除在队头进行 **
 
-![LinkedQ](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/img/LinkedQ.png)
+![LinkedQ](https://github.com/Wishrem/Data-Structure/blob/main/Linear/img/LinkedQ.png)
 
 ```c++
 typedef struct QNode *LinkedQ; // Linked Queue
