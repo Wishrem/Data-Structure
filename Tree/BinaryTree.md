@@ -11,7 +11,7 @@
 
 五种基本状态
 
-![Binary Tree Status]()
+![Binary Tree Status](https://github.com/Wishrem/Data-Structure/blob/main/Tree/img/BinaryTreeStatus.png)
 
 ### 重要性质
 
@@ -43,7 +43,7 @@ void levelOrderTraversal(BinTree bt);	// 层次：上到下，左到右
 
 1. **顺序存储**
 
-![BinTree]()
+![BinTree](https://github.com/Wishrem/Data-Structure/blob/main/Tree/img/BinTree.png)
 
 ~~实际运用较少~~
 
@@ -91,7 +91,7 @@ int height(BinTree root){
 
 3. **二元运算表达式树及其遍历**
 
-   ![BinTree eg3]()
+   ![BinTree eg3](https://github.com/Wishrem/Data-Structure/blob/main/Tree/img/BinTree%20eg3.png)
 
 4. **由两种遍历序列确定二叉树**
 
