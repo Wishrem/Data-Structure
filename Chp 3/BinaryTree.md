@@ -61,3 +61,38 @@ BinTree Root;
 ```
 
 ADT的操作集实现详见BinTree/BinTree1.cpp和BinTree/BinTree2.cpp，前者为递归版本的遍历，后者为非递归版本的遍历
+
+### 遍历二叉树的应用
+
+1. **输出叶子结点**
+
+fn方法
+
+```c++
+void printLeaves(BinTree node){
+  if(!node->left && !node->right)
+		std::cout<<node->data<<" ";
+}
+```
+
+2. **求二叉树的高度**
+
+```c++
+int height(BinTree root){
+	if (!root)
+    return 0;
+  int HL, HR, MaxH;
+  HL = height(root->left);
+  HR = height(root->right);
+  MaxH = HL > HR ? HL : HR;
+  return MaxH+1;
+}
+```
+
+3. **二元运算表达式树及其遍历**
+
+   ![BinTree eg3]()
+
+4. **由两种遍历序列确定二叉树**
+
+**没有中序不能确定**
