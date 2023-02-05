@@ -21,12 +21,12 @@
 **操作集**：线性表$L\in List$，整数$i$表示位置，元素$X\in ElementType$，线性表基本操作主要有：
 
 ```c++
-List MakeEmpty(); // 初始化一个空线性表L
-ElementType FindKth(int K, List L); // 根据位序K，返回相应元素
-int Find(ElementType X, List L); // 在线性表L中查找X的第一次出现位置
-void Inser(ElementType X, int i, List L); // 在位序i前插入一个新的元素X
-void Delete(int i, List L); // 删除指定位序i的元素
-int Length(List L); // 返回线性表L的长度n
+List makeEmpty(); // 初始化一个空线性表L
+ElementType findKth(int k, List l); // 根据位序K，返回相应元素
+int find(ElementType x, List l); // 在线性表L中查找X的第一次出现位置
+void inser(ElementType x, int i, List l); // 在位序i前插入一个新的元素X
+void remove(int i, List l); // 删除指定位序i的元素
+int length(List l); // 返回线性表L的长度n
 ```
 
 ### 物理存储实现
@@ -40,9 +40,9 @@ int Length(List L); // 返回线性表L的长度n
 ```c++
 typedef struct LNode *List;
 struct LNode{
-  ElementType Data[MAXSIZE]; // ElementType 需要typedef定义，这里没写
+  ElementType data[MAXSIZE]; // ElementType 需要typedef定义，这里没写
   // MAXSIZE 需要define定义，这里没写
-  int Last; // 需要知道最后一个元素的位置，可判断是否装满，或者在查找的时候防止越界
+  int last; // 需要知道最后一个元素的位置，可判断是否装满，或者在查找的时候防止越界
 };
 List PtrL; // List Pointer
 ```
@@ -67,8 +67,8 @@ g++ List.cpp -o List.out
 ```c++
 typedef struct LNode *List;
 struct LNode{
-  ElementType Data;
-  List Next; // 下一个元素的指针
+  ElementType data;
+  List next; // 下一个元素的指针
 };
 List Head;  // 指向第一个元素
 ```
@@ -108,12 +108,12 @@ g++ LinkedL.cpp -o LinkedL.out
 ```c++
 typedef struct GNode *GList; // Generalized List
 struct GNode{
-  int Tag; // 标志域：0表示结点是单元素，1表示结点是广义表
+  int tag; // 标志域：0表示结点是单元素，1表示结点是广义表
   union{	// 子表指针域SubList与单元素数据域Data复用，即共用存储空间
-    ElementType Data;
-    GList SubList;
+    ElementType data;
+    GList subList;
   }URegion;
-  GList Next; // 指向后继结点
+  GList next; // 指向后继结点
 };
 ```
 
@@ -125,7 +125,7 @@ struct GNode{
 
 > 例2:
 
-![eg2](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/img/eg2.png)
+![Multiple Linked List](https://github.com/Wishrem/Data-Structure/blob/main/Chp%202/img/eg2.png)
 
 - **链表中的结点可能同时隶属于多个链；**
 - **多重链表中结点的==指针域会有多个==，如前面广义表中包含了Next和SubList两个指针域；**

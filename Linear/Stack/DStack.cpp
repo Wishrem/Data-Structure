@@ -1,13 +1,13 @@
 #include <iostream>
 
-#define MaxSize 20
+#define MAXSIZE 20
 
 typedef struct SNode *DStack;
 typedef int ElementType;
 ElementType ERROR = -1;
 struct SNode
 {
-    ElementType Data[MaxSize];
+    ElementType Data[MAXSIZE];
     int Top1;
     int Top2;
 };
@@ -18,7 +18,7 @@ DStack CreateStack()
 {
     DStack PtrS = new SNode;
     PtrS->Top1 = -1;
-    PtrS->Top2 = MaxSize;
+    PtrS->Top2 = MAXSIZE;
     return PtrS;
 }
 
@@ -44,7 +44,7 @@ bool IsEmpty(DStack PtrS, int Tag)
 
     if (Tag == 1)
         return PtrS->Top1 == -1;
-    return PtrS->Top2 == MaxSize;
+    return PtrS->Top2 == MAXSIZE;
 }
 
 void Push(DStack PtrS, ElementType item, int Tag)
