@@ -1,6 +1,5 @@
 #include <iostream>
 #include <deque>
-#include <vector>
 
 typedef struct TreeNode *BinTree;
 typedef BinTree Position;
