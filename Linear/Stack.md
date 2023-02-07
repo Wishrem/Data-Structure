@@ -46,7 +46,7 @@ Stack PtrS;
 
 ADT的操作集实现详见Stack/Stack.cpp，⚠️这里Top是从-1开始
 
-~~太简单没有运行指令~~
+
 
 > 例1:请用一个数组实现两个堆栈，要求最大地利用数组空间，使数组只要有空间入栈操作就可以成功。
 
@@ -67,8 +67,6 @@ Ptrs->top2=MAXSIZE;
 
 样例实现详见Stack/DStack.cpp
 
-~~太简单没有运行指令~~
-
 2. **链式存储**
 
 ![LinkedS](https://github.com/Wishrem/Data-Structure/blob/main/Linear/img/LinkedS.png)
@@ -86,8 +84,6 @@ LinkedS Top;	// 始终指向链表头
 ```
 
 ADT的操作集实现详见Stack/LinkedS.cpp，⚠️注意这里的Top指针是空的LinkedS和LinkedL中的Head不一样。*严格上来说不能算作指针，算作是指向表头元素的空结点。*
-
-~~太简单没有运行指令~~
 
 ### 堆栈应用：中缀表达式求值
 
