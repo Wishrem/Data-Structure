@@ -84,7 +84,7 @@ void bfs(Graph g, Vertex v){
 
 1. 无权图
 
-![sp1]()
+![sp1](https://github.com/Wishrem/Data-Structure/blob/main/Graph/img/sp1.png)
 
 按照递增（非递减）的顺序找出到各个顶点的最短路
 
@@ -109,7 +109,7 @@ void bfs(Vertex s) {
 
 按照递增的顺序找出到各个顶点的最短路
 
-![sp2]()
+![sp2](https://github.com/Wishrem/Data-Structure/blob/main/Graph/img/sp2.png)
 
 ```c++
 void djkstra(Vertex s){
@@ -197,7 +197,7 @@ void Kruskal(Graph g) {
 
 > 例：计算机专业排课
 
-![AOV]()
+![AOV](https://github.com/Wishrem/Data-Structure/blob/main/Graph/img/AOV.png)
 
 ```c++
 void topSort() {
