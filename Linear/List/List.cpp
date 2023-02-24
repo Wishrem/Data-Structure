@@ -7,8 +7,8 @@ typedef int ElementType;
 typedef struct LNode *List;
 struct LNode
 {
-    ElementType Data[MAXSIZE];
-    int Last;
+    ElementType data[MAXSIZE];
+    int last;
 };
 List PtrL;
 
@@ -16,7 +16,7 @@ List makeEmpty()
 {
     List l;
     l = new LNode;
-    l->Last = -1; // l->Last+1 为长度
+    l->last = -1; // l->last+1 为长度
     return l;
 }
 
@@ -25,11 +25,11 @@ List makeEmpty()
 int find(ElementType X, List l)
 {
     int i = 0;
-    while (i <= l->Last && l->Data[i] != X)
+    while (i <= l->last && l->data[i] != X)
         i++;
 
     // 超过表尾元素下标，即未找到
-    if (i > l->Last)
+    if (i > l->last)
         return -1;
     else
         return i;
@@ -39,22 +39,22 @@ void insert(ElementType X, int i, List l)
 {
     int j;
     // 长度等于最大长度
-    if (l->Last + 1 == MAXSIZE)
+    if (l->last + 1 == MAXSIZE)
     {
         puts("表满");
         return;
     }
     // 检查插入位置的合法性
-    if (i < 1 || i > l->Last + 2)
+    if (i < 1 || i > l->last + 2)
     {
         puts("位置不合法");
         return;
     }
-    // 需要在i-1插入，需要将Data[i-1...Last]全部向后移1位
-    for (j = l->Last; j >= i - 1; j--)
-        l->Data[j + 1] = l->Data[j];
-    l->Data[i] = X;
-    l->Last++;
+    // 需要在i-1插入，需要将Data[i-1...last]全部向后移1位
+    for (j = l->last; j >= i - 1; j--)
+        l->data[j + 1] = l->data[j];
+    l->data[i] = X;
+    l->last++;
     return;
 }
 
@@ -62,21 +62,21 @@ void remove(int i, List l)
 {
     int j;
     // 检查删除位置的合法性
-    if (i < 1 || i > l->Last + 1)
+    if (i < 1 || i > l->last + 1)
     {
         printf("不存在第%d个元素", i);
         return;
     }
-    // 需要删除下标为i-1的元素，需要将Data[i...Last]全部向前移1位
-    for (j = i; j <= l->Last; j++)
-        l->Data[j - 1] = l->Data[j];
-    l->Last--;
+    // 需要删除下标为i-1的元素，需要将Data[i...last]全部向前移1位
+    for (j = i; j <= l->last; j++)
+        l->data[j - 1] = l->data[j];
+    l->last--;
     return;
 }
 
 int length(List l)
 {
-    return l->Last + 1;
+    return l->last + 1;
 }
 
 // Debug
@@ -94,7 +94,7 @@ void test(List l, void (*fp)(List l, int i), int times)
     int i;
     for (int j = 0; j < n; j++)
     {
-        ub = l->Last + 3;
+        ub = l->last + 3;
         i = randi(lb, ub);
         fp(l, i);
     }
@@ -104,7 +104,7 @@ void printList(List l)
 {
     printf("List:");
     for (int i = 0; i < length(l); i++)
-        printf("%d ", l->Data[i]);
+        printf("%d ", l->data[i]);
     printf("\n");
 }
 
